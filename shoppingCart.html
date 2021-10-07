@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>確認購物車</title>
+    <link rel="stylesheet" href="scss/all.css">
+
+</head>
+<body class="container ">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img class="logo svg" src="./image/logo-03.svg"></a> 
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">品牌故事</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        全部商品
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">腰果系列</a></li>
+                      <li><a class="dropdown-item" href="#">堅果系列</a></li>
+                      <li><a class="dropdown-item" href="#">禮盒系列</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">品牌介紹</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">月配送</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">購物資訊</a>
+                  </li>
+
+                </ul>
+
+                
+              </div>
+            </div>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <!-- <button class="btn btn-sm btn-outline-success" type="submit">Search</button>  -->
+                <button class="btn btn-sm "><img src="./image/icons8-search.svg " alt=""></button>
+                <!-- <a href="" class="btn btn-primary">log in</a>
+                <a href="" class="btn btn-danger">log out</a> -->
+            </form> 
+          </nav>
+    </header>
+
+    <div class="container my-5">
+
+        <div class="progress h-25 rounded-pill ">
+          <div class="progress-bar progress-bar-success" style="width: 40%"><h5>確認購物車</h5></div>
+          <div class="progress-bar bg-secondary" style="width: 30%"><h5>付款與運送方式</h5></div>
+          <div class="progress-bar bg-secondary" style="width: 40%"><h5>資料確認</h5></div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+      <ul class=" list-unstyled">
+        <div class="container">
+          <li class="row"> 
+            <div class="col-md-1 ">
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label " for="flexCheckDefault">
+              </div>
+            </div>
+            <div class="row bg-light mx-auto col-md-11">
+              <p class="col-md-5 text-center  ">商品明細</p>
+              <p class="col-md-2 text-center ">價格</p>
+              <p class="col-md-1 text-center ">數量</p>
+              <p class="col-md-2 text-center ">小計</p>
+              <p class="col-md-1 text-center ">庫存</p>
+              <p class="col-md-1 text-center ">變更</p>
+            </div>          
+              </label>
+          </li>
+
+          <li class="row my-1 ">
+            <div class="col-md-1 ">
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label " for="flexCheckDefault">
+              </div>
+            </div>
+            <div class="row bg-light mx-auto col-md-11 ">
+              <div class="col-md-5 text-center d-flex">
+               <div class="row">
+                <img src="./image/origen-L.jpg" alt="" class="align-self-center col-md-5" style="width: 40%;"> 
+                <h4 class="align-self-center col-md-5">原味腰果</h4>
+               </div>
+              </div>
+              <p class="col-md-2 text-center align-self-center">480</p>
+              <p class="col-md-1 text-center align-self-center" ><input type="number" value="3" min="0" max="30" step="10" name="" id=""></p>
+              <p class="col-md-2 text-center align-self-center">1440</p>
+              <p class="col-md-1 text-center align-self-center">有</p>
+              <button class="btn btn-primary col-md-1 align-content-sm-center align-self-center " type="submit">刪除</button>
+            </div>          
+              </label>
+          </li>
+
+          <li class="row my-1 ">
+            <div class="col-md-1 ">
+              <div class="form-check" >
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label " for="flexCheckDefault">
+              </div>
+            </div>
+            <div class="row bg-light mx-auto col-md-11 ">
+              <div class="col-md-5 text-center d-flex">
+               <div class="row">
+                <img src="./image/origen-L.jpg" alt="" class="align-self-center col-md-5" style="width: 40%;"> 
+                <h4 class="align-self-center col-md-5">原味腰果</h4>
+               </div>
+              </div>
+              <p class="col-md-2 text-center align-self-center">480</p>
+              <p class="col-md-1 text-center align-self-center" ><input type="number" value="3" min="0" max="30" step="10" name="" id=""></p>
+              <p class="col-md-2 text-center align-self-center">1440</p>
+              <p class="col-md-1 text-center align-self-center">有</p>
+              <button class="btn btn-primary col-md-1 align-content-sm-center align-self-center " type="submit">刪除</button>
+            </div>          
+              </label>
+          </li>
+        </div>
+
+         <div class="container">
+          <div class="row  pt-3 ">
+            <p class="col-md-9 text-end">共Ｎ項商品, 共Ｎ+2個，總金額NT$</p>
+            <p class="col-md-2 text-center">960</p>
+            <p class="col-md-1 text-center">元</p>
+          </div>
+          <div class="row  pt-3 ">
+              <p class="col-md-9 text-end">訂單金額小記NT$</p>
+              <p class="col-md-2 text-center">1980</p>
+              <p class="col-md-1 text-center">元</p>
+          </div>
+          <div class="row  pt-3 ">
+              <p class="col-md-9 text-end">運費NT$</p>
+              <p class="col-md-2 text-center">100</p>
+              <p class="col-md-1 text-center">元</p>
+          </div>
+          <div class="row  pt-3 bg-warning">
+              <p class="col-md-9 text-end">本訂單需付款金額NT$</p>
+              <p class="col-md-2 text-center">2080</p>
+              <p class="col-md-1 text-center">元</p>
+          </div>
+        </div>
+        <div class="btnStep d-grid gap-2 d-md-flex justify-content-md-end my-5">
+          <a class="btn btn-secondary text-white" href="#" role="button">上一步</a>
+          <a class="btn btn-primary" href="#" role="button">下一步</a>
+        </div>
+
+        
+      </ul>
+    </div>
+
+    
+
+
+    <div class="footer text-center bg-primary py-5 fs-5 d-flex justify-content-around text-white rounded">
+
+      <!-- <figure class="text-center">
+        <blockquote class="blockquote text-white">
+          <p>© 2017  品辰歲月,珍辰貿易有限公司. All Rights Reserved. <br> 官方Line@：@uhk1137n｜Fax:07-7833027 <br> 地址：高雄市力行路67號  服務專線：07-7833027</p> 
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+      </figure> -->
+
+      <ul class="list-group list-group-flush  ">
+        <li class="list-group-item bg-transparent text-white"><h3>關於我們</h3></li>
+        <li class="list-group-item bg-transparent text-white">檢驗報告</li>
+        <li class="list-group-item bg-transparent text-white">最新消息</li>
+        <li class="list-group-item bg-transparent text-white">關於我們</li>
+      </ul>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-transparent text-white"><h3>購物指南</h3></li>
+        <li class="list-group-item bg-transparent text-white">優惠專區</li>
+        <li class="list-group-item bg-transparent text-white">訂購單下載</li>
+        <li class="list-group-item bg-transparent text-white">高雄市教育產業工會</li>
+      </ul>
+      <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftastynuts.co%2F&tabs=timeline&width=300&height=70&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="300" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+      <div id="fb-root">
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0" nonce="mNsp8ON9"></script>
+        <div class="fb-page" data-show-facepile=" true " data-href="https://www.facebook.com/tastynuts.co/"  data-width="350" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tastynuts.co/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tastynuts.co/">品辰歲月</a></blockquote></div>
+        <!-- data-tabs="timeline" -->
+      </div>
+        
+      <ul class=" list-unstyled text-end">
+        <li>
+          <h4> 宅配專線:07-7833027</h4>
+        </li>
+        <li>
+          <h4> 傳真專線:07-7833027</h4>
+        </li>
+        <li>
+          <h4> 地址： 831高雄市大寮區力行路67號</h4>
+        </li>
+      </ul>
+  </div>
+    
+    
+
+</body>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</html>
