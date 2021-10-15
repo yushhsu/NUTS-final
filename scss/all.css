@@ -11946,6 +11946,23 @@ fieldset:disabled .btn {
 }
 
 .svg {
+  width: 12%;
+}
+
+.recipesImg {
   width: 120px;
+}
+
+body {
+  font-family: "cwTeXYem", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #0a58ca;
 }
 /*# sourceMappingURL=all.css.map */
