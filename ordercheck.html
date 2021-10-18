@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>表頭表尾</title>
+    <title>訂單查詢</title>
     <link rel="stylesheet" href="scss/all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -59,22 +59,81 @@
                     </div> -->
     </header>
 
+    <div class="container">
+
+        <div class="sidebarMembership py-3">
+            <div class="row sidebar ">
+
+                <div class="list-group col-md-2 text-center">
+
+                    <div class=" bg-primary rounded-1 text-center text-white mb-3 ">
+                        <h4 class="m-0 py-1">會員專區</h4>
+                    </div>
+                    
+                    <div class="order mt-3">
+                        <h6  class="list-group-item list-group-item-action active bg-primary border border-primary" aria-current="true">我的訂單與訂閱</h6>
+                        <a href="ordercheck.html" class="list-group-item list-group-item-action text-primary">訂單查詢</a>
+                        <a href="monthlyOrder.html" class="list-group-item list-group-item-action text-primary">訂閱查詢</a>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="memberfile.html" class="list-group-item list-group-item-action border" >會員資料編輯</a>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="orderCheck col-sm-10 container ">
+                    <table class="table">
+                        <div class="bg-primary rounded-1 text-center text-white mb-3" >
+                            <h4 class="m-0 py-1" >訂單查詢</h4>
+                        </div>
+                        <thead>
+                            <tr>
+                                <th scope="col">訂單編號</th>
+                                <th scope="col">訂購時間</th>
+                                <th scope="col">付款方式</th>
+                                <th scope="col">訂單金額</th>
+                                <th scope="col">商品名稱</th>
+                                <th scope="col">數量合計</th>
+                                <th scope="col">處理狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th ><a href="order.html">234634634-ab</a></th>
+                                <th >2021/12/03</th>
+                                <th >銀行匯款</th>
+                                <th >2500</th>
+                                <th >原味堅果＊3</th>
+                                <th >4</th>
+                                <th >配送中</th>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <th ><a href="order.html">234634634-ab</a></th>
+                                    <th >2021/12/03</th>
+                                    <th >線上刷卡</th>
+                                    <th >2500</th>
+                                <th >原味堅果＊3</th>
+                                <th >4</th>
+                                <th >已完成</th>
+                                </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            
+        
+        </div>
+        <div class="" style="height: 10rem;"></div>
+    </div>
 
     
     <div class="footer container ">
         <div class="text-center bg-primary py-5 fs-5 text-white rounded row">
-            <!-- <div class="footer text-center bg-primary py-5 fs-5 d-flex align-items-md-center  flex-sm-column text-white rounded"></div> -->
-            <!-- align-items-lg-center flex-column -->
-    
-            <!-- <figure class="text-center">
-            <blockquote class="blockquote text-white">
-                <p>© 2017  品辰歲月,珍辰貿易有限公司. All Rights Reserved. <br> 官方Line@：@uhk1137n｜Fax:07-7833027 <br> 地址：高雄市力行路67號  服務專線：07-7833027</p> 
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-            </figcaption>
-            </figure> -->
-    
             <ul class="col-lg-2 list-group list-group-flush  ">
                 <li class="list-group-item bg-transparent text-white p-0 my-1"><h3>關於我們</h3></li>
                 <li class="list-group-item bg-transparent text-white p-0">檢驗報告</li>

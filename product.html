@@ -4,63 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美味堅果</title>
+    <title>美味堅果 - 品辰歲月</title>
     <link rel="stylesheet" href="scss/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body class="container ">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <!-- <div class="container-fluid"> -->
-              <!-- <a class="navbar-brand" href="#"></a>  -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <div class="container-fluid">
+                <a class="navbar-brand svg" href="#"><img class="logo " src="./image/logo-03.svg"></a> 
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-              <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><img class="logo " src="./image/logo-03.svg"></a>
-                      </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">品牌故事</a>
-                  </li>
-                  <li class="nav-item dropdown">
+                        <a class="nav-link " aria-current="page" href="brand.html">品牌故事</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="menu.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">全部商品</a>
+
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="menu.html">全部商品</a></li>
+                        <li><a class="dropdown-item" href="#">腰果系列</a></li>
+                        <li><a class="dropdown-item" href="#">堅果系列</a></li>
+                        <li><a class="dropdown-item" href="#">禮盒系列</a></li>
+                        </ul>
+                    </li>
                     
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        全部商品
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">腰果系列</a></li>
-                      <li><a class="dropdown-item" href="#">堅果系列</a></li>
-                      <li><a class="dropdown-item" href="#">禮盒系列</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recipes.html">美味堅果</a></li>
+                    <li class="nav-item"><a class="nav-link" href="monthlymenu.html">月配送</a></li>
+                    <li class="nav-item"><a class="nav-link" href="info.html">購物資訊</a></li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">美味堅果</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">月配送</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">購物資訊</a>
-                  </li>
 
-                </ul>
+                    <form class="d-flex ms-auto">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <span class="material-icons my-auto">search</span>
+                    </form> 
                 </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-sm btn-outline-success" type="submit">Search</button> 
-                <!-- <a href="" class="btn btn-primary">log in</a>
-                <a href="" class="btn btn-danger">log out</a> -->
-            </form> 
-          </nav>
-        <div class="banner">
-            <img src="./image/cover.jpg" class="img-fluid  " alt="">
-        </div>
+            </div>
+            
+            
+            <!-- <a href="" class="btn btn-primary">log in</a> -->
+                <!-- <a href="" class="btn btn-danger">log out</a> -->
+        </nav>
+
+        <!-- Benner---------------------------------- -->
+                    <!-- <div class="banner">
+                        <img src="./image/cover.jpg" class="img-fluid  " alt="">
+                    </div> -->
     </header>
 
     <div class="row my-5">
@@ -91,7 +87,7 @@
                 </button>
               </div>
             <!-- <img src="./image/origen-L-01.png class="img-fluid w-75 " alt="..."> -->
-            <div class="container">
+            <div class="container ">
                 <div class="row ">
                     <img src="./image/origen-L-01.png" class="img-thumbnail col-sm-3" alt="...">
                     <img src="./image/第二期/IMG_9931.JPG" class="img-thumbnail col-sm-3 " alt="...">
@@ -100,55 +96,59 @@
                 </div> 
             </div>
         </div>
+
+        <div class="col-md-6 d-flex flex-column ">
+          <div class="productPrice row ">
+            <div class="DetailDetail col-md-8 ">
+                <h2>產品名稱</h2>
+                <h4>規格大小 - 470ML </h4>
+            </div>
+            <h3 class=" col-md-4 text-end">NT 480</h>
+        </div>
+        <h4>產品描述</h4>
+        <p>Aenean mauris dui, viverra in augue vel, egestas luctus nisi. Sed placerat gravida interdum. Vestibulum eleifend vulputate nibh eu lacinia. Vestibulum vehicula, neque at venenatis placerat, ipsum enim volutpat risus, eget fermentum nulla lacus a ipsum. Nullam fringilla congue ipsum. Praesent ut eli</p>
+
+        <div class="d-grid gap-2 d-md-flex flex-column align-items-end mt-5 ">
+            <div class="btnRowTwo">
+                <button class="btn btn-primary me-md-2" type="button">下次再買</button>
+                <button class="btn btn-primary" type="button">立即結帳</button>
+            </div>
+
+            <div class="input-group">
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                  <option selected>請選擇數量</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+                <button class="btn btn-outline-secondary" type="button">加到購物車</button>
+              </div>
+        </div>
+        </div>
         <div class="discripction col-md-6 ">
-            <div class="productPrice row ">
-                <div class="DetailDetail col-md-8 ">
-                    <h2>產品名稱</h2>
-                    <h4>規格大小 - 470ML </h4>
-                </div>
-                <h3 class=" col-md-4 text-end">NT 480</h>
-            </div>
-            <h4>產品描述</h4>
-            <p>Aenean mauris dui, viverra in augue vel, egestas luctus nisi. Sed placerat gravida interdum. Vestibulum eleifend vulputate nibh eu lacinia. Vestibulum vehicula, neque at venenatis placerat, ipsum enim volutpat risus, eget fermentum nulla lacus a ipsum. Nullam fringilla congue ipsum. Praesent ut eli</p>
-
-            <div class="d-grid gap-2 d-md-flex flex-column align-items-end mt-5 ">
-                <div class="btnRowTwo">
-                    <button class="btn btn-primary me-md-2" type="button">下次再買</button>
-                    <button class="btn btn-primary" type="button">立即結帳</button>
-                </div>
-
-                <div class="input-group">
-                    <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                      <option selected>請選擇數量</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                    </select>
-                    <button class="btn btn-outline-secondary" type="button">加到購物車</button>
-                  </div>
-            </div>
+            
         </div>
         <!-- <營養標示> -->
         <div class="container mt-5">
             <div class="row">
-                <div class="productDetail col-md-7">
+                <div class="productDetail col-md-6">
                     <h2>產品規格</h2>
                     <p>Aenean mauris dui, viverra in augue vel, egestas luctus nisi. Sed placerat gravida interdum. Vestibulum eleifend vulputate nibh eu lacinia. Vestibulum vehicula, neque at venenatis placerat, ipsum enim volutpat risus, eget fermentum nulla lacus a ipsum. Nullam fringilla congue ipsum. Praesent ut eli</p>
                 </div>
-                <div class="nutrition col-md-4 col-md-ms-2 border border-dark">
+                <div class="nutrition col-lg-4 border border-dark">
                     <dl class="row mb-0">
-                        <dt class="col-sm-7">營養標示</dt>
-                        <dd class="col-sm-5 text-end"></dd>
-                        <dt class="col-sm-7">每份含量</dt>
-                        <dd class="col-sm-5 text-end">50公克</dd>
-                        <dt class="col-sm-7">本包裝含</dt>
-                        <dd class="col-sm-5 text-end">5份</dd>
-                        <dt class="col-sm-5 text-end"></dt>
-                        <dd class="col-sm-3 text-end">每份</dd>
-                        <dd class="col-sm-4 text-end">每100公克</dd>
+                        <dt class="col-lg-7">營養標示</dt>
+                        <dd class="col-lg-5 text-end"></dd>
+                        <dt class="col-lg-7">每份含量</dt>
+                        <dd class="col-lg-5 text-end">50公克</dd>
+                        <dt class="col-lg-7">本包裝含</dt>
+                        <dd class="col-lg-5 text-end">5份</dd>
+                        <dt class="col-lg-5 text-end"></dt>
+                        <dd class="col-lg-3 text-end">每份</dd>
+                        <dd class="col-lg-4 text-end">每100公克</dd>
                         
                         <dt class="col-sm-5">熱量</dt>
                         <dd class="col-sm-3 text-end">297.0</dd>
@@ -198,161 +198,72 @@
     </div>
 
 
-    <div class="footer text-center bg-primary py-5 fs-5 d-flex justify-content-around text-white rounded">
-
-        <!-- <figure class="text-center">
-          <blockquote class="blockquote text-white">
-            <p>© 2017  品辰歲月,珍辰貿易有限公司. All Rights Reserved. <br> 官方Line@：@uhk1137n｜Fax:07-7833027 <br> 地址：高雄市力行路67號  服務專線：07-7833027</p> 
-          </blockquote>
-          <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-          </figcaption>
-        </figure> -->
-  
-        <ul class="list-group list-group-flush  ">
-          <li class="list-group-item bg-transparent text-white"><h3>關於我們</h3></li>
-          <li class="list-group-item bg-transparent text-white">檢驗報告</li>
-          <li class="list-group-item bg-transparent text-white">最新消息</li>
-          <li class="list-group-item bg-transparent text-white">關於我們</li>
-        </ul>
-  
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item bg-transparent text-white"><h3>購物指南</h3></li>
-          <li class="list-group-item bg-transparent text-white">優惠專區</li>
-          <li class="list-group-item bg-transparent text-white">訂購單下載</li>
-          <li class="list-group-item bg-transparent text-white">高雄市教育產業工會</li>
-        </ul>
-        <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftastynuts.co%2F&tabs=timeline&width=300&height=70&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="300" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
-        <div id="fb-root">
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0" nonce="mNsp8ON9"></script>
-          <div class="fb-page" data-show-facepile=" true " data-href="https://www.facebook.com/tastynuts.co/"  data-width="350" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tastynuts.co/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tastynuts.co/">品辰歲月</a></blockquote></div>
-          <!-- data-tabs="timeline" -->
-        </div>
-          
-        <ul class=" list-unstyled text-end">
-          <li>
-            <h4> 宅配專線:07-7833027</h4>
-          </li>
-          <li>
-            <h4> 傳真專線:07-7833027</h4>
-          </li>
-          <li>
-            <h4> 地址： 831高雄市大寮區力行路67號</h4>
-          </li>
-        </ul>
-    </div>
+    <div class=" container footer ">
+        <div class="text-center bg-primary py-5 fs-5 text-white rounded row">
+            <!-- <div class="footer text-center bg-primary py-5 fs-5 d-flex align-items-md-center  flex-sm-column text-white rounded"></div> -->
+            <!-- align-items-lg-center flex-column -->
     
+            <!-- <figure class="text-center">
+            <blockquote class="blockquote text-white">
+                <p>© 2017  品辰歲月,珍辰貿易有限公司. All Rights Reserved. <br> 官方Line@：@uhk1137n｜Fax:07-7833027 <br> 地址：高雄市力行路67號  服務專線：07-7833027</p> 
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+            </figcaption>
+            </figure> -->
     
-
-</body>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>美味堅果</title>
-    <link rel="stylesheet" href="scss/all.css">
-
-</head>
-<body class="container ">
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="logo svg" src="./image/logo-03.svg"></a> 
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">品牌故事</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">全部商品</a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">腰果系列</a></li>
-                    <li><a class="dropdown-item" href="#">堅果系列</a></li>
-                    <li><a class="dropdown-item" href="#">禮盒系列</a></li>
-                    </ul>
-                </li>
-                
-                <li class="nav-item"><a class="nav-link" href="#">品牌介紹</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">月配送</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">購物資訊</a></li>
-
-                </ul>
-
+            <ul class="col-lg-2 list-group list-group-flush  ">
+                <li class="list-group-item bg-transparent text-white p-0 my-1"><h3>關於我們</h3></li>
+                <li class="list-group-item bg-transparent text-white p-0">檢驗報告</li>
+                <li class="list-group-item bg-transparent text-white p-0">最新消息</li>
+                <li class="list-group-item bg-transparent text-white p-0">關於我們</li>
+            </ul>
+    
+            <ul class="col-lg-2 list-group list-group-flush">
+                <li class="list-group-item bg-transparent text-white p-0 my-1 "><h3>購物指南</h3></li>
+                <li class="list-group-item bg-transparent text-white p-0">優惠專區</li>
+                <li class="list-group-item bg-transparent text-white p-0">訂購單下載</li>
+                <li class="list-group-item bg-transparent text-white p-0" ><a herf="http://www.keu.org.tw/keu/newView.aspx?keuNewsId=18088">高雄市教師會</a></li>
+            </ul>
+            
+            <div class=" col-lg-3 "> <!-- mt-md-5 ms-md-4 -->
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftastynuts.co%2F&tabs=timeline&width=300&height=70&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="300" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <!-- <div class="container text-center" id="fb-root">
+                    <div class="fb-page" data-href="https://www.facebook.com/tastynuts.co/" data-width="380" height="130" style="border: none;overflow: hidden;" scrolling="no" frameborder="0" data-hide-cover="false" data-show-facepile="false" data-show-facepile="true"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0" nonce="mNsp8ON9"></script>
+                    
+                </div> -->
                 
             </div>
+            <div class="col-lg-5 align-self-center">
+    
+                <ul class=" container list-unstyled">
+                
+                    <li class="">
+                        <p class="text-lg-start mb-0">E-mail: zhenchenco@gmail.com</p>
+                    </li>
+                    <li>
+                    <p class="text-lg-start mb-0"> 宅配專線:07-7833027</p>
+                    </li>
+                    <li>
+                    <p class="text-lg-start mb-0"> 傳真專線:07-7833028</p>
+                    </li>
+                    <li>
+                    <p class="text-lg-start mb-0"> 地址：831高雄市大寮區力行路67號</p>
+                    </li>
+            </ul>
             </div>
             
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <!-- <button class="btn btn-sm btn-outline-success" type="submit">Search</button>  -->
-                <button class="btn btn-sm "><img src="./image/icons8-search.svg " alt=""></button>
-                <!-- <a href="" class="btn btn-primary">log in</a>
-                <a href="" class="btn btn-danger">log out</a> -->
-            </form> 
-        </nav>
-    </header>
-
-
     
-    <div class="footer text-center bg-primary py-5 fs-5 d-flex justify-content-around text-white rounded">
-
-        <!-- <figure class="text-center">
-        <blockquote class="blockquote text-white">
-            <p>© 2017  品辰歲月,珍辰貿易有限公司. All Rights Reserved. <br> 官方Line@：@uhk1137n｜Fax:07-7833027 <br> 地址：高雄市力行路67號  服務專線：07-7833027</p> 
-        </blockquote>
-        <figcaption class="blockquote-footer">
-            Someone famous in <cite title="Source Title">Source Title</cite>
-        </figcaption>
-        </figure> -->
-
-        <ul class="list-group list-group-flush  ">
-            <li class="list-group-item bg-transparent text-white"><h3>關於我們</h3></li>
-            <li class="list-group-item bg-transparent text-white">檢驗報告</li>
-            <li class="list-group-item bg-transparent text-white">最新消息</li>
-            <li class="list-group-item bg-transparent text-white">關於我們</li>
-        </ul>
-
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item bg-transparent text-white"><h3>購物指南</h3></li>
-            <li class="list-group-item bg-transparent text-white">優惠專區</li>
-            <li class="list-group-item bg-transparent text-white">訂購單下載</li>
-            <li class="list-group-item bg-transparent text-white">高雄市教育產業工會</li>
-        </ul>
-        <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftastynuts.co%2F&tabs=timeline&width=300&height=70&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="300" height="100" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
-        <div id="fb-root">
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0" nonce="mNsp8ON9"></script>
-            <div class="fb-page" data-show-facepile=" true " data-href="https://www.facebook.com/tastynuts.co/"  data-width="350" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/tastynuts.co/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/tastynuts.co/">品辰歲月</a></blockquote></div>
-            <!-- data-tabs="timeline" -->
+            
         </div>
-        
-        <ul class=" list-unstyled text-end">
-            <li>
-            <h4> 宅配專線:07-7833027</h4>
-            </li>
-            <li>
-            <h4> 傳真專線:07-7833027</h4>
-            </li>
-            <li>
-            <h4> 地址： 831高雄市大寮區力行路67號</h4>
-            </li>
-        </ul>
     </div>
-    
-    
+        
+        
 
-</body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-</html>
+    </body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    </html>
+
+        
+        
