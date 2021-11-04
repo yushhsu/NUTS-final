@@ -84,15 +84,33 @@
         </div>
         <!-- Benner---------------------------------- -->
         <div class="container-fluid">
-            <div class="d-flex  justify-content-center"> 
-                <img src="./image/cover.jpg" class="img-fluid  " alt="">
-            </div>
+            <!-- <div class="d-flex  justify-content-center"></div> -->
+            <form runat="server">
+                <!---------------- <input accept="image/*" type='file' id="imgInp" /> -->
+                <!-- <img id="banner"  src="./image/cover.jpg"class="img-fluid" alt="banner" />
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">  -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        
+                    <div class=" banner carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4000">
+                            <img src="./image/cover.jpg" class="d-block w-100" alt="bannerIMG">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="./image/cover.jpg" class="d-block w-100" alt="bannerIMG">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4000">
+                            <img src="./image/cover.jpg" class="d-block w-100" alt="bannerIMG">
+                        </div>
+                        
+                    </div>
+                </div>
+            </form> 
         </div>            
     </header>
 
     <div class="container  justify-content-center align-item-center my-5">
-        <div class=""></div>
-        <ul class="nav nav-tabs nav-justified " id="myTab" role="tablist">
+        
+        <ul class="nav nav-tabs nav-justified " id="inputSignup" role="tablist">
                 <li class="nav-item " role="presentation">
                     <button class="nav-link active" id="signUp-tab" data-bs-toggle="tab" data-bs-target="#signUp" type="button" role="tab" aria-controls="signUp" aria-selected="true">註冊會員</button>
                 </li>
@@ -100,9 +118,9 @@
                     <button class="nav-link" id="logIn-tab" data-bs-toggle="tab" data-bs-target="#logIn" type="button" role="tab" aria-controls="logIn" aria-selected="false">會員登入</button>
                 </li>
             </ul>
-        <div class="tab-content justify-content-center mt-5" id="myTabContent">
-            <div class="tab-pane fade show active " id="signUp" role="tabpanel" aria-labelledby="signUp-tab">
-                <form class="row justify-content-center ">
+        <div class=" memberAccount tab-content justify-content-center mt-5" id="myTabContent">
+            <div class=" tab-pane fade show active " id="signUp" role="tabpanel" aria-labelledby="signUp-tab">
+                <form class=" row justify-content-center memberAccount">
                     <div class="socialLogin d-grid gap-2 col-lg-7 mx-auto mb-4">
                         <button type="button" class="btn btn-facebook btn-lg ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
@@ -114,24 +132,24 @@
                     <div class="col-lg-7 mx-auto">
                         <label for="validationUsername" class="form-label mb-0">會員姓名</label>
                         <div class="input-group has-validation">
-                            <input type="text" class="form-control is-invalid" id="validationUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                            <input type="text" autocomplete="username" class="register form-control is-invalid" id="inputSignupUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required value="1">
                             <div id="validationServerUsernameFeedback" class="invalid-feedback">請輸入姓名</div>
                         </div>
                     </div>
                     <div class="col-lg-7 mx-auto">
-                        <label for="inputEmail" class="form-label mb-0">電子郵件</label>
-                        <input type="email" class="form-control is-invalid" id="inputEmail" aria-describedby="emailHelp" required>
+                        <label for="inputSignupEmail" class="form-label mb-0">電子郵件</label>
+                        <input type="email" autocomplete="username" class="register form-control is-invalid" id="inputSignupEmail" aria-describedby="emailHelp" required>
                         <div id="emailHelp" class="invalid-feedback">請輸入正確電子郵件.</div>
                     </div>
                     <div class="col-lg-7 mx-auto">
-                        <label for="inputPassword" class="form-label mb-0">密碼</label>
-                        <input type="password" class="form-control is-invalid" id="inputPassword" required>
+                        <label for="inputSignupPassword" class="form-label mb-0">密碼</label>
+                        <input type="password"  autocomplete="current-password" class="register form-control is-invalid" id="inputSignupPassword" required>
                         <!-- <select class="password" id="inputPassword" aria-describedby="validationServer04Feedback" required> -->
                         <div class="invalid-feedback" selected disabled value="">請輸入正確密碼，至少8字元</div>
                         
                     </div>
                     <div class="col-md-7 mx-auto mt-4">
-                        <a href="menu.html"><button class="btn btn-primary w-100" type="submit">立即加入會員</button></a>
+                        <a href="#"><button class="btn btn-primary w-100" type="button" value="立即加入會員" id="signUpBTN">立即加入會員</button></a>
                     </div>
                 </form>
             </div>
@@ -147,18 +165,18 @@
                     </div>
                     <div class="col-lg-7 ">
                         <label for="inputEmail" class="form-label mb-0 ">電子郵件</label>
-                        <input type="email" class="form-control is-invalid" id="inputEmail" aria-describedby="emailHelp" required>
+                        <input type="email" autocomplete="username" class="loginEmail form-control is-invalid" id="inputEmail" aria-describedby="emailHelp" required>
                         <div id="emailHelp" class="invalid-feedback">請輸入正確電子郵件.</div>
                     </div>
                     <div class="col-lg-7">
                         <label for="inputPassword" class="form-label">密碼</label>
-                        <input type="password" class="form-control is-invalid" id="inputPassword" required>
+                        <input type="password" autocomplete="current-password" class="loginPassword form-control is-invalid" id="inputPassword" required>
                         <!-- <select class="password" id="inputPassword" aria-describedby="validationServer04Feedback" required> -->
                         <div class="invalid-feedback" selected disabled value="">請輸入正確密碼，至少8字元</div>
                         
                     </div>
                     <div class="col-md-7">
-                        <a href="menu.html"><button class="btn btn-primary w-100 my-4" type="submit">登入購物</button></a>
+                        <a href="menu.html"><button class="loginBtn btn btn-primary w-100 my-4" type="submit">登入購物</button></a>
                     </div>
                 </form>
             </div>
@@ -216,7 +234,11 @@
     </div>
     
     
+ 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/signupLogin.js"></script>
+    <!-- <script src="all.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
 </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 </html>
