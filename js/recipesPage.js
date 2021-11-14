@@ -1,4 +1,4 @@
-const url = "https://nuts-final.rocket-coding.com/api/image";
+// const url = "https://nuts-final.rocket-coding.com/image";
 // 菜單頁--------------------------------------------------------------------------------------------菜單頁---
 const recipeItem = document.querySelector(".recipeItem");
 function combineRecipeItem(item) {

@@ -10,7 +10,7 @@ memberAccount.addEventListener("click", function (e) {
   if (e.target.nodeName === "BUTTON") {
     e.preventDefault();
     // console.log("123");
-    console.log(validationUsername.value);
+    // console.log(validationUsername.value);
     let obj = {
       memberName: inputSignupUsername.value,
       memberPassword: inputSignupPassword.value,
@@ -18,6 +18,7 @@ memberAccount.addEventListener("click", function (e) {
       memberIsVerfied: false,
       memberIsSNS: false,
     };
+    console.log(obj);
 
     axios
       .post("https://nuts-final.rocket-coding.com/api/addmembers", obj)
@@ -45,23 +46,26 @@ function logIncheck() {
   //   memberPassword: "ckshrimp",
   // };
 
-  if (memberMail.value == "" || memberPassword.value == "") {
-    alert("資料有誤");
-    return;
-  }
+  // if (memberMail.value == "" || memberPassword.value == "") {
+  //   alert("資料有誤");
+  //   return;
+  // }
 
   let memberData = {};
-  memberData.memberMail = memberMail.value;
-  memberData.memberPassword = memberPassword.value;
-  console.log(memberData);
+  memberData.memberMail = loginMail.value;
+  // console.log(memberData.memberMail);
+  memberData.memberPassword = loginPassword.value;
+  // console.log(memberData);
 
   axios
     .post("https://nuts-final.rocket-coding.com/api/login", memberData)
     .then((res) => {
       console.log(res.data);
 
-      if (status == "true") {
-        window.open("products.html");
+      if (res.data.status) {
+        //存token
+        localStorage.setItem("token", res.data.token);
+        window.location.href = "memberfile.html";
       } else {
         alert("此帳號不存在或帳號密碼錯誤");
       }
