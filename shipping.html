@@ -116,38 +116,38 @@
         </div>
     </div>
 
-    <div class="container main border py-3 rounded profileSt">
+    <div class="profileSt container main border py-3 rounded profileSt">
         
         <form class="row g-3 " >
             
             <div class="col-md-12">
-                <label for="inputFristname4" class="form-label">姓名</label>
-                <input type="text" class="form-control" data-order="memberName" id="inputFristname4" value="">
+                <label for="memberName" class="form-label">姓名</label>
+                <input type="text" class="memberName form-control" data-order="memberName" id="memberName" value="">
             </div>
             
             <div class="col-md-6">
                 <label for="mobile" class="form-label">手機</label>
-                <input type="tel" class="form-control" data-order="memberMobile" id="mobile" value="">
+                <input type="tel" class="memberMobile form-control" data-order="memberMobile" id="mobile" value="">
             </div>
             <div class="col-md-6">
                 <label for="tel" class="form-label">市話</label>
-                <input type="tel" class="form-control" data-order="memberHomePhone" id="tel" placeholder="非必填" value="">
+                <input type="tel" class="memberHomePhone form-control" data-order="memberHomePhone" id="tel" placeholder="非必填" value="">
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" data-order="memberMail" id="email" aria-describedby="emailHelp" placeholder="test@example.com" value="">
+                <input type="email" class="memberMail form-control" data-order="memberMail" id="email" aria-describedby="emailHelp" placeholder="test@example.com" value="">
             </div>
             
             <div class="col-md-9">
                 <label for="inputAddress" class="form-label">地址</label>
-                <input type="text" class="form-control" data-order="memberAddress" id="inputAddress" placeholder="縣市/街道/門牌" value="">
+                <input type="text" class="memberAddress form-control" data-order="memberAddress" id="inputAddress" placeholder="縣市/街道/門牌" value="">
             </div>
             
             
             <div class="col-md-3">
                 <label for="inputZip" class="form-label">郵遞區號</label>
-                <input type="text" class="form-control" data-order="memberPostcode" id="inputZip" value="">
+                <input type="text" class="memberPostcode form-control" data-order="memberPostcode" id="inputZip" value="">
             </div>
             
             <!-- <div class="col-12">
@@ -160,22 +160,18 @@
         
         <form class="row g-3">
             <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-                同上
-            </label>
-        </div>             
-    </div> 
-            
-            <div class="col-md-12">
-                <label for="inputFristname4" class="form-label">姓名</label>
-                <input type="text" class=" memberNumber form-control" data-sent="memberNumber" id="inputFristname4" value="">
+                <div class="form-check">
+                    <input class="checkBox form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        同上
+                    </label>
+                </div> 
             </div>
-            <!-- <div class="col-md-6">
-                <label for="inputLastname4" class="form-label">姓</label>
-                <input type="text" class=" form-= control" data-sent="" id="inputLastname4" value="">
-            </div> -->
+        
+            <div class="col-md-12">
+                <label for="memberName" class="form-label">姓名</label>
+                <input type="text" class=" memberName form-control" data-sent="memberName" id="memberName" value="">
+            </div>
             <div class="col-md-6">
                 <label for="mobile" class="form-label">手機</label>
                 <input type="tel" class=" memberMobilePhone form-control" data-sent="memberMobilePhone" id="mobile" value="">
@@ -201,13 +197,14 @@
                 <input type="text" class=" memberPostcode form-control" data-sent="memberPostcode" id="inputZip" value="">
             </div>
             
-            <!-- <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </div> -->
-            </form>    
+            
+        </form>  
+    </div> 
+            
+              
     </div>
 
-    <div class="cart-collaterals container my-5 ">
+    <div class="countingPrice cart-collaterals container my-5 ">
 
         <div class="row border-top pt-3 ">
             <p class="col-md-9 text-end">訂單金額小計NT$</p>
@@ -299,7 +296,9 @@
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="config.js"></script>
+    <script src="/js/comfirm.js"></script>
     <script src="/js/shipping.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
 </body>

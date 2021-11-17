@@ -1,10 +1,51 @@
 const api_path = "";
-const token =
-  "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6NywiTmFtZSI6Illpd2VuIiwiRXhwIjoiMTEvNC8yMDIxIDExOjQ1OjQ3IFBNIn0.05OgpZtaWfFqTdNuMIcSZFRjZ1xPDbmwH3ciTqYS0L-ckY-s3mg9u2goqJBeIYO4MvkxFZlkVcZsmRjNeKqAnw";
-const url = "https://nuts-final.rocket-coding.com/api/image";
+const token = localStorage.getItem("token");
+
+const url = "https://tastynuts.rocket-coding.com/image";
+const imgUrl = "https://tastynuts.rocket-coding.com";
+const productCoverUrl =
+  "https://tastynuts.rocket-coding.com/image/product_Cover";
+// const productImgUrl = "https://tastynuts.rocket-coding.com/image/product_Img";
+
+//banner--------------------------------------------------------------------------------------------banner---
+// axios
+//   .get("https://tastynuts.rocket-coding.com/api/banners")
+//   .then(function (res) {
+//     formData.get("bannerName");
+//     console.log(bannerName);
+//     console.log(res.data);
+//     const bannerData = res.data;
+//     const mainImg = res.data.bannerName;
+//     const bannerUrl = `https://tastynuts.rocket-coding.com/image/${mainImg}`;
+//     // const BannerData = new FormData(document.getElementById("banner"));
+//     //     BannerData.get("banner");
+//   });
+
+//產品頁-網址傳值
+var siteUrl = location.href;
+//再來用去尋找網址列中是否有資料傳遞(QueryString)
+if (siteUrl.indexOf("?") != -1) {
+  //之後去分割字串把分割後的字串放進陣列中
+  var ary1 = siteUrl.split("?");
+  //此時ary1裡的內容為：
+  //ary1[0] = 'index.aspx'，ary2[1] = 'id=U001&name=GQSM'
+
+  //下一步把後方傳遞的每組資料各自分割
+  var ary2 = ary1[1].split("&");
+  //此時ary2裡的內容為：
+  //ary2[0] = 'id=U001'，ary2[1] = 'name=GQSM'
+
+  //最後如果我們要找id的資料就直接取ary[0]下手，name的話就是ary[1]
+  var ary3 = ary2[0].split("=");
+  //此時ary3裡的內容為：
+  //ary3[0] = 'id'，ary3[1] = 'U001'
+
+  //取得id值
+  var eachProductId = ary3[1];
+}
 
 // const instance = axios.create({
-//   baseURL: "https://nuts-final.rocket-coding.com/api/image",
+//   baseURL: "https://tastynuts.rocket-coding.com/api/image",
 //   timeout: 1000,
 //   headers: { "X-Custom-Header": "foobar" },
 // });
@@ -16,7 +57,7 @@ const url = "https://nuts-final.rocket-coding.com/api/image";
 
 // function getProductList() {
 //   axios
-//     .get("https://nuts-final.rocket-coding.com/api/${api_path}")
+//     .get("https://tastynuts.rocket-coding.com/api/${api_path}")
 //     .then(function (response) {
 //       //看data有幾筆
 //       console.log(response.data);
@@ -37,7 +78,7 @@ const url = "https://nuts-final.rocket-coding.com/api/image";
 
 // function getProductList() {
 //     axios
-//         .get("https://nuts-final.rocket-coding.com/api/products/1")
+//         .get("https://tastynuts.rocket-coding.com/api/products/1")
 //         .then(function (response) {
 //             itemData = response.data.products;
 //             renderProductList()
@@ -57,7 +98,7 @@ const url = "https://nuts-final.rocket-coding.com/api/image";
 
 // function getRecipeDetailData() {
 //     axios
-//       .get("https://nuts-final.rocket-coding.com/api/recipes/1")
+//       .get("https://tastynuts.rocket-coding.com/api/recipes/1")
 //         .then(function (res) {
 
 //         }

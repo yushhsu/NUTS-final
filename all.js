@@ -1,33 +1,12 @@
 // const productDetail = document.querySelector(".productDetail");
 
 // 全域變數
-const url = "https://nuts-final.rocket-coding.com/api/image";
-
-//跳頁進去閱讀
-// recipelist.addEventListener("click", function (e) {
-//   if (e.target.getAttribute("class") == read) {
-//     return;
-//   }
-// });
-
-//banner--------------------------------------------------------------------------------------------banner---
-axios
-  .get("https://nuts-final.rocket-coding.com/api/banners")
-  .then(function (res) {
-    formData.get("bannerName");
-    console.log(bannerName);
-    console.log(res.data);
-    const bannerData = res.data;
-    const mainImg = res.data.bannerName;
-    const bannerUrl = `https://nuts-final.rocket-coding.com/image/${mainImg}`;
-    //     const BannerData = new FormData(document.getElementById("banner"));
-    //     BannerData.get("banner");
-  });
+const url = "https://tastynuts.rocket-coding.com/api/image";
 
 //訂單查詢orderinfo --------------------------------------------------------------------------------------------orderinfo---
 
 //   axios
-//     .get("https://nuts-final.rocket-coding.com/api/orderinfo/1")
+//     .get("https://tastynuts.rocket-coding.com/api/orderinfo/1")
 //     .then(function (res) {
 //       let data = [];
 //       data.push(res.data);
@@ -60,7 +39,7 @@ axios
 //會員專區 memberfile ----------------------------------------------------------------------------------------會員專區 memberfile---
 
 // axios
-//   .get("https://nuts-final.rocket-coding.com/api/members/2")
+//   .get("https://tastynuts.rocket-coding.com/api/members/2")
 //   .then(function (res) {
 //     let data = [];
 //     data.push(res.data);
