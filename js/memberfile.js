@@ -23,13 +23,15 @@ let data = {
 
 let obj = {};
 
-// const token = localStorage.getItem("token");
-// console.log(token);
+const token = localStorage.getItem("token");
+console.log(token);
 
 function getMemberflie() {
+  console.log("我有被啟動喔！");
   axios({
     method: "get",
-    url: "https://nuts-final.rocket-coding.com/api/members",
+    url: "https://tastynuts.rocket-coding.com/api/members",
+
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -37,7 +39,7 @@ function getMemberflie() {
     console.log(res);
 
     localStorage.setItem("token", res.data.token);
-
+    console.log(token);
     memberId = res.data.memberInfo.Id;
     memberName = res.data.memberInfo.memberName;
     memberBirth = res.data.memberInfo.memberBirth;
@@ -47,59 +49,50 @@ function getMemberflie() {
     memberAddress = res.data.memberInfo.memberAddress;
 
     membersFileCheck.innerHTML = `
-  <div class="membersFileCheck col-sm-10 container " data-id="${memberId}"> 
-  
-            <table class="table">
-                <div class="bg-primary rounded-1 text-center text-white mb-3" >
-                    <h4 class="m-0 py-1" >會員資料</h4>
-                </div>
-            </table>
-    
-            <label for="basic-url" class="form-label">會員姓名</label>
-            <div class="input-group mb-3">
-                <input type="text" class="memberName form-control" data-info="memberName" placeholder="王小明" aria-label="Username" aria-describedby="basic-addon1" value="${memberName}" >
-            </div>
-    
-            <label for="basic-url" class="form-label">出生年/月/日</label>
-            <div class="input-group mb-3">
-                <input type="date" class="memberBirth form-control" data-info="memberBirth" placeholder="1991/01/02" aria-label="basic-addon5" value="${memberBirth}">
-            </div>
-    
-            <label for="basic-url" class="form-label">市話 含區碼</label>
-            <div class="input-group mb-3">
-                <input type="number" class="memberHomePhone form-control" data-info="memberHomePhone" placeholder="02-1234-4567" aria-label="Username" aria-describedby="basic-addon2" value="${memberHomePhone}">
-            </div>
-    
-            <label for="basic-url" class="form-label">手機</label>
-            <div class="input-group mb-3">
-                <input type="number" class="memberMobilePhone form-control" data-info="memberMobilePhone" placeholder="09-12334567" aria-label="mobile" aria-describedby="basic-addon3" value="${memberMobilePhone}">
-            </div>
-    
-            <label for="basic-url" class="form-label">電子信箱</label>
-            <div class="input-group mb-3">
-                <input type="email" class="memberMail form-control" data-info="memberMail" placeholder="abe@nuts.com" aria-label="email" aria-describedby="basic-addon4" value="${memberMail}" disabled>
-            </div>
-            <label for="basic-url" class="form-label">郵遞區號</label>
-            <div class="input-group mb-3">
-                <input type="text" class="memberPostcode form-control" data-info="memberPostcode" placeholder="800 " aria-label="postcode" aria-describedby="basic-addon6" value="${memberPostcode}">
-            </div>
-            <label for="basic-url" class="form-label">聯絡地址</label>
-            <div class="input-group mb-3">
-                <input type="text" class="memberAddress form-control" data-info="memberAddress" placeholder="高雄市三民區" aria-label="Address" aria-describedby="basic-addon6" value="${memberAddress}">
-            </div>
-    
-            <a href="#"><button class=" profileSave btn btn-primary justify-content-center" type="submit">確定修改</button></a>
-    
-        </div>`;
+    <div class="membersFileCheck col-sm-10 container " data-id="${memberId}">
 
-    //表單儲存
-    // save.addEventListener("click", function (e) {
-    //     if (memberBirth.value == "null") {
-    //       alert("your bDay!!!!");
-    //     }
-    //   });
-    //   console.log(save);
-    // });
+              <table class="table">
+                  <div class="bg-primary rounded-1 text-center text-white mb-3" >
+                      <h4 class="m-0 py-1" >會員資料</h4>
+                  </div>
+              </table>
+
+              <label for="basic-url" class="form-label">會員姓名</label>
+              <div class="input-group mb-3">
+                  <input type="text" class="memberName form-control" data-info="memberName" placeholder="王小明" aria-label="Username" aria-describedby="basic-addon1" value="${memberName}" >
+              </div>
+
+              <label for="basic-url" class="form-label">出生年/月/日</label>
+              <div class="input-group mb-3">
+                  <input type="date" class="memberBirth form-control" data-info="memberBirth" placeholder="1991/01/02" aria-label="basic-addon5" value="${memberBirth}">
+              </div>
+
+              <label for="basic-url" class="form-label">市話 含區碼</label>
+              <div class="input-group mb-3">
+                  <input type="number" class="memberHomePhone form-control" data-info="memberHomePhone" placeholder="02-1234-4567" aria-label="Username" aria-describedby="basic-addon2" value="${memberHomePhone}">
+              </div>
+
+              <label for="basic-url" class="form-label">手機</label>
+              <div class="input-group mb-3">
+                  <input type="number" class="memberMobilePhone form-control" data-info="memberMobilePhone" placeholder="09-12334567" aria-label="mobile" aria-describedby="basic-addon3" value="${memberMobilePhone}">
+              </div>
+
+              <label for="basic-url" class="form-label">電子信箱</label>
+              <div class="input-group mb-3">
+                  <input type="email" class="memberMail form-control" data-info="memberMail" placeholder="abe@nuts.com" aria-label="email" aria-describedby="basic-addon4" value="${memberMail}" disabled>
+              </div>
+              <label for="basic-url" class="form-label">郵遞區號</label>
+              <div class="input-group mb-3">
+                  <input type="text" class="memberPostcode form-control" data-info="memberPostcode" placeholder="800 " aria-label="postcode" aria-describedby="basic-addon6" value="${memberPostcode}">
+              </div>
+              <label for="basic-url" class="form-label">聯絡地址</label>
+              <div class="input-group mb-3">
+                  <input type="text" class="memberAddress form-control" data-info="memberAddress" placeholder="高雄市三民區" aria-label="Address" aria-describedby="basic-addon6" value="${memberAddress}">
+              </div>
+
+              <a href="#"><button class=" profileSave btn btn-primary justify-content-center" type="submit">確定修改</button></a>
+
+          </div>`;
 
     console.log(membersFileCheck);
 
@@ -107,7 +100,7 @@ function getMemberflie() {
     const profileSave = document.querySelector(".profileSave");
     const newInfoData = document.querySelectorAll("[data-info]");
     profileSave.addEventListener("click", function (e) {
-      //取值 ------------------------------------------------------------------回來新增ＰＵＳＨ 取到值然後ＰＵＳＨ進ＩＮＰＵＴ裏面
+      //   //取值 ------------------------------------------------------------------回來新增ＰＵＳＨ 取到值然後ＰＵＳＨ進ＩＮＰＵＴ裏面
       e.preventDefault();
       newInfoData.forEach(function (item) {
         obj["memberId"] = memberId;
@@ -117,7 +110,7 @@ function getMemberflie() {
 
       //   axios({
       //     method: "put",
-      //     url: "https://nuts-final.rocket-coding.com/api/editmember",
+      //     url: "https://tastynuts.rocket-coding.com/api/editmember",
       //     headers: {
       //       Authorization: `Bearer ${token}`,
       //     },
@@ -142,7 +135,7 @@ function getMemberflie() {
 
       axios({
         method: "put",
-        url: "https:nuts-final.rocket-coding.com/api/editmember",
+        url: "https://tastynuts.rocket-coding.com/api/editmember",
         headers: {
           Authorization: `Bearer ${token}`,
           //   "Content-Type": "application/x-www-form-urlencoded",

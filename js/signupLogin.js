@@ -21,7 +21,7 @@ memberAccount.addEventListener("click", function (e) {
     console.log(obj);
 
     axios
-      .post("https://nuts-final.rocket-coding.com/api/addmembers", obj)
+      .post("https://tastynuts.rocket-coding.com/api/addmembers", obj)
       .then(function (res) {
         console.log(res);
       })
@@ -58,7 +58,7 @@ function logIncheck() {
   // console.log(memberData);
 
   axios
-    .post("https://nuts-final.rocket-coding.com/api/login", memberData)
+    .post("https://tastynuts.rocket-coding.com/api/login", memberData)
     .then((res) => {
       console.log(res.data);
 

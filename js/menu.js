@@ -16,18 +16,18 @@ let str = `<li class="col-lg-4 p-2 pt-0 ">
 
 // function getProductList() {
 axios
-  .get("https://nuts-final.rocket-coding.com/api/productlist")
+  .get("https://tastynuts.rocket-coding.com/api/productlist")
   .then(function (response) {
     // console.log(response);
     let data = response.data.productlist;
-    // console.log(data);
+    console.log(data);
     let str = "";
 
     data.forEach((item) => {
-      //   console.log(item);
+      console.log(item);
       str += `<li class="col-lg-4 p-2 pt-0 " id="${item.Id}">
         <div class="card mb-3"  >
-            <img src="${productCoverUrl}/${item.productImgCover}" class="cardImg"  alt="腰果照片">
+            <img src="${url}${item.productImgCover}" class="cardImg"  alt="腰果照片">
             <div class="card-content d-flex ">
                 <div class="card-body ">
                     <h5 class="card-title">${item.productName}</h5>

@@ -1,12 +1,13 @@
 const addCart = document.querySelector(".addCart");
+// const eachProductId
 
-console.log(productQuantity);
+// console.log(productQuantity);
 console.log(addCart);
 // 商品頁 products--------------------------------------------------------------------------------------------商品頁---
 let data;
 const eachProduct = document.querySelector(".eachProduct");
 axios
-  .get(`https://nuts-final.rocket-coding.com/api/products/${eachProductId}`)
+  .get(`https://tastynuts.rocket-coding.com/api/products/${eachProductId}`)
   .then(function (response) {
     data = response.data;
 
@@ -23,15 +24,15 @@ axios
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">       
                             <div class="carousel-inner">
                             <div class="carousel-item active" id="">
-                                    <img src="${productCoverUrl}${data.product.productImgCover}" class="d-block w-100" alt="...">
+                                    <img src="${url}${data.product.productImgCover}" class="d-block w-100" alt="...">
                                 </div>`;
-    // data.productImg.forEach(function (item, index) {
-    //   eachProduct.innerHTML += `
-    //                                                     <div class="carousel-item " id="${item.ImgId}">
-    //                                                         <img src="${url}${item.productImgName}" class="d-block w-100" alt="...">
-    //                                                     </div>;
-    //                                                     `;
-    // });
+    data.productImg.forEach(function (item, index) {
+      eachProduct.innerHTML += `
+                                                        <div class="carousel-item " id="${item.ImgId}">
+                                                            <img src="${url}${item.productImgName}" class="d-block w-100" alt="...">
+                                                        </div>;
+                                                        `;
+    });
     eachProduct.innerHTML += ` </div> 
                             
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

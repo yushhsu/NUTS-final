@@ -2,9 +2,16 @@
 
 const recipelist = document.querySelector(".recipelist");
 
+// 跳頁進去閱讀;
+recipelist.addEventListener("click", function (e) {
+  if (e.target.getAttribute("class") == read) {
+    return;
+  }
+});
+
 function getRecipeData() {
   axios
-    .get("https://nuts-final.rocket-coding.com/api/recipeslist")
+    .get("https://tastynuts.rocket-coding.com/api/recipeslist")
     .then(function (res) {
       let data = res.data.recipelist;
       console.log(data);
@@ -17,7 +24,7 @@ function getRecipeData() {
             <div class=" card mb-3 ">
                 <div class="row g-0 rounded">
                     <div class="col-md-4 p-2">
-                        <img src="${url}/${item.recipeCover}" class="img-fluid rounded-3 "alt="果昔">
+                        <img src="${imgUrl}/${item.recipeCover}" class="img-fluid rounded-3 "alt="果昔">
                     </div>
                     <div class="col-md-8 my-auto">
                         <div class="card-body">
