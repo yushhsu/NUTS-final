@@ -1,4 +1,6 @@
 let cartData = [];
+// const token2 = localStorage.getItem("token");
+// console.log(typeof token2);
 const shippingInfo = JSON.parse(localStorage.getItem("shippingInfo"));
 const myData = JSON.parse(localStorage.getItem("productQuantity"));
 const comfirmData = document.querySelector(".comfirmData");
@@ -6,6 +8,8 @@ const comfirmData = document.querySelector(".comfirmData");
 const countingPrice = document.querySelector(".countingPrice");
 // console.log(countingPrice);
 cartData = myData;
+const btnStep2Pay = document.querySelector(".btnStep2Pay");
+const btnStep = document.querySelector(".btnStep");
 
 // console.log(comfirmData);
 const shoppingCartList = document.querySelector(".shoppingCartList");
@@ -102,13 +106,14 @@ countingProduct();
 // console.log(countingPrice.innerHTML);
 
 //收件人資料
+function payAndShip() {
+  // const shippingInfo = JSON.parse(localStorage.getItem("shippingInfo"));
+  shippingData = shippingInfo;
+  console.log(shippingData);
+  const shippingToSomeone = document.querySelector(".shippingToSomeone");
 
-// const shippingInfo = JSON.parse(localStorage.getItem("shippingInfo"));
-shippingData = shippingInfo;
-console.log(shippingData);
-const shippingToSomeone = document.querySelector(".shippingToSomeone");
-
-let shippingStr = `<div class="row">
+  // shippingData.forEach(function(item){})
+  shippingToSomeone.innerHTML = `<div class="row">
 <label for="textarea" class="mt-3 ">付款方式與寄送資訊</label>
 <div class="row border py-3 rounded pt-4">
     <div class="col-md-3 text-center ">
@@ -129,29 +134,111 @@ let shippingStr = `<div class="row">
         <p>收件者</p>
     </div>
     <div class="col-md-9">
-        <p>徐某某</p>
+        <p>${shippingData.memberName}</p>
     </div>
 
     <div class="col-md-3 text-center">
         <p>聯絡電話</p>
     </div>
     <div class="col-md-9">
-        <p>0912-3456789 </p>
+        <p>${shippingData.memberMoblie}</p>
     </div>
 
     <div class="col-md-3 text-center">
         <p>E-mail</p>
     </div>
     <div class="col-md-9">
-        <p>abc1234@gmail.com </p>
+        <p>${shippingData.memberMail}</p>
     </div>
 
     <div class="col-md-3 text-center">
         <p>收件地址</p>
     </div>
     <div class="col-md-9">
-        <p>${item.memberAddress}</p>
+        <p>${shippingData.memberAddress}</p>
     </div>
 </div>`;
 
-// shippingData.forEach(function (item) {});
+  console.log(shippingToSomeone.innerHTML);
+}
+payAndShip();
+
+const payBtn = document.querySelector(".payBtn");
+let PostPayBillAPI =
+  "https://tastynuts.rocket-coding.com/api/orderConfirmation";
+
+let Newebpay = document.forms["Newebpay"];
+
+console.log(Newebpay);
+
+let MemberUserPayBtn = document.getElementById("MemberUserPayBtn");
+
+let PayBillData = "";
+
+function PostToPayBill() {
+  let payBillData = {
+    order: {
+      orderPayment: "1",
+      orderStatus: "0",
+      orderShipping: "160",
+      orderRcName: "name01",
+      orderRcMPhone: "mphone01",
+      orderRcHPhone: "hphone01",
+      orderRcMail: "chywen18@gmail.com",
+      orderRcPostCode: "postcode01",
+      orderRcAddress: "address01",
+    },
+    order_info: [
+      {
+        productId: "1011",
+        productUnitPrice: "100",
+        productAmount: "2",
+      },
+    ],
+    order_subinfo: [
+      {
+        subscriptiontId: " 1",
+        subscriptioncCycle: " 雙週",
+        subscriptionPrice: " 1000",
+      },
+    ],
+  };
+  console.log(token);
+  console.log(payBillData);
+  let license = { headers: { Authorization: `Bearer ${token}` } };
+
+  axios
+    .post(PostPayBillAPI, payBillData, license)
+    .then(function (response) {
+      console.log(response.data);
+      PayBillData = response.data;
+      let TradeInfoData = "";
+      let TradeShaData = "";
+      TradeInfoData = response.data.return2Newebpay.TradeInfo;
+      TradeShaData = response.data.return2Newebpay.TradeSha;
+      console.log(TradeInfoData);
+
+      btnStep.style.display = "hidden";
+
+      btnStep2Pay.innerHTML = `
+               <form name='Newebpay' method='post' action='https://ccore.newebpay.com/MPG/mpg_gateway'>
+               <input type='hidden' id='MerchantID' name='MerchantID' value='MS125897385'>
+               <input type='hidden' id='TradeInfo' name='TradeInfo' value='${TradeInfoData}'>
+               <input type='hidden' id='TradeSha' name='TradeSha' value='${TradeShaData}'>
+               <input type='hidden' id='Version' name='Version' value='1.6'>
+               <input class="  btn btn-lg btn-primary " type='submit' value='前往付款'>
+               </form>
+             `;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  // if(payBtn == )
+}
+
+MemberUserPayBtn.addEventListener("click", PostToPayBill);
+
+// payBtn.addEventListener("click", function (e) {
+
+// });
