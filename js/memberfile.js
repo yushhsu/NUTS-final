@@ -152,6 +152,7 @@ function getMemberflie() {
         },
       }).then(function (response) {
         console.log(response.data);
+        alert("資料更新成功！");
       });
     });
   });

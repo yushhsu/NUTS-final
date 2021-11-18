@@ -15,6 +15,7 @@ const btnStep = document.querySelector(".btnStep");
 const shoppingCartList = document.querySelector(".shoppingCartList");
 let dataStr = "";
 let str = "";
+
 function getListItem(e) {
   cartData.forEach(function (item) {
     str += `

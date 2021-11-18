@@ -31,7 +31,7 @@ axios
             <div class="card-content d-flex ">
                 <div class="card-body ">
                     <h5 class="card-title">${item.productName}</h5>
-                    <p class="card-text"></p>${item.productOriPrice}</p>
+                    <p class="card-text text-decoration-line-through">${item.productOriPrice}</p>
                     <p class="card-text"></p>${item.productSpePrice}</p>
                 </div>
                 <a href="product.html?productId=${item.Id}" class="btn btn-primary  align-self-center me-2 ">選購</a>

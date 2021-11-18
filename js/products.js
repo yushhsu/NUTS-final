@@ -1,23 +1,23 @@
 const addCart = document.querySelector(".addCart");
-// const eachProductId
 
 // console.log(productQuantity);
 console.log(addCart);
 // 商品頁 products--------------------------------------------------------------------------------------------商品頁---
 let data;
 const eachProduct = document.querySelector(".eachProduct");
+const carouselS = document.querySelector(".carouselS");
 axios
-  .get(`https://tastynuts.rocket-coding.com/api/products/${eachProductId}`)
+  .get(`https://tastynuts.rocket-coding.com/api/products/1016`)
   .then(function (response) {
     data = response.data;
-
+    console.log(data.product.productImgCover);
     // data.push(response.data);
     // data.productImg.forEach(function (item, index) {
     //   console.log(item);
     //加入變數
     eachProduct.innerHTML = `
         <div class="container">
-            <div class="row my-5 eachProduct" id="" >
+            <div class="row my-5 eachProduct" >
                 <div class="col-md-6 h-75">
                     <figure class="figure">
                         
@@ -25,16 +25,17 @@ axios
                             <div class="carousel-inner">
                             <div class="carousel-item active" id="">
                                     <img src="${url}${data.product.productImgCover}" class="d-block w-100" alt="...">
-                                </div>`;
-    data.productImg.forEach(function (item, index) {
-      eachProduct.innerHTML += `
-                                                        <div class="carousel-item " id="${item.ImgId}">
-                                                            <img src="${url}${item.productImgName}" class="d-block w-100" alt="...">
-                                                        </div>;
-                                                        `;
-    });
-    eachProduct.innerHTML += ` </div> 
-                            
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="${url}${data.productImg[0].productImgName}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="${url}${data.productImg[0].productImgName}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="${url}${data.productImg[0].productImgName}" class="d-block w-100" alt="...">
+                            </div>
+
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -44,15 +45,15 @@ axios
                                 <span class="visually-hidden">Next</span>
                                 </button>
                         </div>
-                            <!-- <img src="./image/origen-L-01.png class="img-fluid w-75 " alt="..."> -->
+                            
                         <figcaption class=" figure-caption row  ">
                             <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"><img src="${url}/${data.product.productImgCover}" alt="" class="w-75"></button>
-                            <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img src="${url}" alt="" class="w-75"></button>
-                            <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img src="${url}" alt="" class="w-75"></button>
-                            <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img src="${url}" alt="" class="w-75"></button>
+                            <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img src="${url}/${data.product.productImgCover}" alt="" class="w-75"></button>
+                            <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img src="${url}/${data.product.productImgCover}" alt="" class="w-75"></button>
+                            <button class="btn col-sm-3" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img src="${url}/${data.product.productImgCover}" alt="" class="w-75"></button>
                         </figcaption>
                     </figure>
-                </div>;
+                </div>
             
                 <div class="col-md-6 d-flex flex-column ">
                     <div class="productPrice row ">
@@ -61,8 +62,8 @@ axios
                         </div>
                         <h3 class=" col-md-4 text-end">
                             <div class="d-flex flex-wrap">
-                                <h3>NT$${data.product.productOriPrice}</h3>
-                                <h3>NT$${data.product.productSpePrice}</h3>
+                                <h3 class="text-decoration-line-through">NT$ ${data.product.productOriPrice}</h3>
+                                <h3>NT$ ${data.product.productSpePrice}</h3>
                             </div>
                         </h3>
                     </div>
@@ -70,10 +71,6 @@ axios
                     <p >${data.product.productDescription}</p>
             
                     <div class="d-grid gap-2 d-md-flex flex-column align-items-end mt-5 ">
-                        <div class="btnRowTwo">
-                            <button class="btn btn-primary me-md-2" type="button">下次再買</button>
-                            <button class=" btn btn-primary" type="button">立即結帳</button>
-                        </div>
             
                         <div class="input-group">
                             <select class="form-select" id="productQuantity" aria-label="Example select with button addon">
@@ -191,22 +188,8 @@ eachProduct.addEventListener("click", function (e) {
   //送幾個產品（找出選單送數量）
   if (e.target.classList.contains("addCart")) {
     console.log(productQuantity.value);
-    //   }
+
     //加入購物車 （要加入localStorage 在購物車時在取值）
-    //   let cartInfo = [
-    //     {
-    //       Id: productId,
-    //       productQuantity: "",
-    //       productImage: data.product.productImgCover,
-    //       productName: data.product.productName,
-    //       productSpePrice: data.product.productSpePrice,
-    //       productQuantity: productQuantity.value,
-    //       //   productPrice: data.product.productPrice,
-    //       //   productStorage: data.product.productStorage,
-    //       //   sub: data.product.sub,
-    //       //   subType: data.product.subType,
-    //     },
-    //   ];
 
     let cartInfoObj = {
       Id: productId,

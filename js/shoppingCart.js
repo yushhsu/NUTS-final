@@ -10,7 +10,7 @@ console.log(cartData);
 let str = "";
 function getListItem(e) {
   cartData.forEach(function (item) {
-    str += `<tr>
+    str += `<tr class="lists" data-num="num">
         <th class="w-25"><img src="./image/origen-L.jpg" alt="" class="d-flex align-self-center " style="width: 20%;"></th>
         <th scope="col">${item.productName}</th>
         <th scope="col">${item.productSpePrice}</th>
@@ -27,7 +27,7 @@ function getListItem(e) {
   shoppingCartList.innerHTML = str;
 }
 getListItem();
-console.log(typeof cartData[0].productSpePrice);
+// console.log(typeof cartData[0].productSpePrice);
 
 let totalPrice = 0;
 let totalNum = 0;
@@ -61,9 +61,27 @@ countingPrice.innerHTML = ` <div class="row  pt-3 ">
 </div>`;
 
 // const btnDelete = document.querySelector(".btnDelete");
+// const list = document.querySelector(".lists");
 // console.log(btnDelete);
 
 // btnDelete.addEventListener("click", function (e) {
 //   e.preventDefault();
 //   console.log(btnDelete);
+//   var currentNum = e.target.dataset.num;
+//   //(要插入或刪除的索引位置, 要刪除的元素數量, 要插入的元素內容)
+//   shoppingCartList.splice;
+//   alert("點擊刪除了");
 // });
+// function deleteItem(e) {
+//   // var current = e.target.nodeName;
+//   var current = e.target.nodeName; //當刪除事件指的是自己的 nodeName
+//   if (current == "A" || current == "I") {
+//     var currentNum = e.target.dataset.num; //選取到自定義的 data-num
+//     taskList.splice(currentNum, 1); //就刪除該筆的一筆資料
+//   } else {
+//     return;
+//   }
+//   // updateList(); //重新更新清單
+// }
+
+// btnDelete.addEventListener("click", deleteItem, false);

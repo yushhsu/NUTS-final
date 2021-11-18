@@ -65,7 +65,7 @@ function logIncheck() {
       if (res.data.status) {
         //存token
         localStorage.setItem("token", res.data.token);
-        window.location.href = "memberfile.html";
+        window.location.href = "ordercheck.html";
       } else {
         alert("此帳號不存在或帳號密碼錯誤");
       }
