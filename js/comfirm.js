@@ -181,27 +181,27 @@ let payBillData = {
     orderPayment: "1",
     orderStatus: "0",
     orderShipping: "160",
-    orderRcName: "name01",
-    orderRcMPhone: "mphone01",
-    orderRcHPhone: "hphone01",
-    orderRcMail: "chywen18@gmail.com",
-    orderRcPostCode: "postcode01",
-    orderRcAddress: "address01",
+    orderRcName: "沈龜人",
+    orderRcMPhone: "0912345678",
+    orderRcHPhone: "07 3712345",
+    orderRcMail: "turtleman.little@gmail.com",
+    orderRcPostCode: "800",
+    orderRcAddress: "高雄市前鎮區復興四路12號",
   },
   order_info: [
     {
-      productId: "1011",
-      productUnitPrice: "100",
+      productId: "1016",
+      productUnitPrice: "342",
       productAmount: "2",
     },
   ],
-  order_subinfo: [
-    {
-      subscriptiontId: " 1",
-      subscriptioncCycle: " 雙週",
-      subscriptionPrice: " 1000",
-    },
-  ],
+  // order_subinfo: [
+  //   {
+  //     subscriptiontId: " 1",
+  //     subscriptioncCycle: " 雙週",
+  //     subscriptionPrice: " 1000",
+  //   },
+  // ],
 };
 console.log(token);
 console.log(payBillData);
