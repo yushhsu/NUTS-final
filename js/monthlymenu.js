@@ -3,23 +3,23 @@
 
 const monthlyItem = document.querySelector(".monthlyItem");
 console.log(monthlyItem);
-// const toSubNuts = document.querySelector(".toSubNuts");
+const toSubNuts = document.querySelector(".toSubNuts");
 // const toSub = document.getElementById("addCartBtn");
 // console.log(toSub);
 
-// toSub.addEventListener("click", function () {
-//   console.log(status.checked);
-// });
-// console.log(toSubNuts);
-// toSubNuts.addEventListener("click", function () {
-// e.preventDefault();
-// alert("YYyyyyyy");
-// function nextPage() {
-//   window.location.href = "monthly.html";
-// }
-// nextPage();
-// window.location.href = "monthly.html";
-// });
+toSubNuts.addEventListener("click", function (e) {
+  //   console.log(status.checked);
+  // });
+  // console.log(toSubNuts);
+  // toSubNuts.addEventListener("click", function () {
+  // e.preventDefault();
+  alert("YYyyyyyy");
+  // function nextPage() {
+  //   window.location.href = "monthly.html";
+  // }
+  // nextPage();
+  // window.location.href = "monthly.html";
+});
 // console.log(toSub);
 
 axios
@@ -51,10 +51,12 @@ axios
                 </div>`;
     monthlyItem.innerHTML = str;
 
-    //     monthlyItem.addEventListener("click", function(nextPage), false);
-    //     // {
-    //     //   alert("123143256674");
-    //     // });
+    monthlyItem.addEventListener("click", function (e) {
+      console.log(e.target.nodeName);
+      if (e.target.nodeName == "BUTTON") {
+        window.location.href = "monthly.html";
+      }
+    });
 
     //     function nextPage() {
     //   window.location.href = "monthly.html";

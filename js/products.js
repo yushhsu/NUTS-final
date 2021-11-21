@@ -1,5 +1,5 @@
 const addCart = document.querySelector(".addCart");
-
+console.log(eachProductId);
 // console.log(productQuantity);
 console.log(addCart);
 // 商品頁 products--------------------------------------------------------------------------------------------商品頁---
@@ -7,7 +7,7 @@ let data;
 const eachProduct = document.querySelector(".eachProduct");
 const carouselS = document.querySelector(".carouselS");
 axios
-  .get(`https://tastynuts.rocket-coding.com/api/products/1016`)
+  .get(`https://tastynuts.rocket-coding.com/api/products/${eachProductId}`)
   .then(function (response) {
     data = response.data;
     console.log(data.product.productImgCover);
@@ -201,6 +201,7 @@ eachProduct.addEventListener("click", function (e) {
     };
 
     const getproductDATA = JSON.parse(localStorage.getItem("productQuantity"));
+
     console.log(getproductDATA);
 
     function addMoreProduct(e) {

@@ -1,4 +1,6 @@
 const ordered = document.querySelector(".ordered");
+const orders = document.querySelector(".orders");
+
 let str = "";
 let orderList = [];
 axios({
@@ -9,34 +11,21 @@ axios({
   },
 }).then(function (res) {
   console.log(res);
-  data = res.data.orderall[0];
+  data = res.data.orderall;
   console.log(data);
 
-  //   ordered.innerHTML = `<trclass="text-center" >
-  //   <th ><a href="order.html/">${data.orderNumber}</a></th>
-  //   <th >${data.orderDate}</th>
-  //   <th >${data.orderIsSubscription}</th>
-  //   <th >${data.orderTotal}</th>
-  //   <th >${data.orderPayment}</th>
-  //   <th >${data.orderAmount}</th>
-  //   <th >${data.orderStatus}</th>
-  //   </tr>`;
+  data.forEach((item) => {
+    console.log(item);
+    str += `<tr class="text-center orders"" >
+      <th ><a href="order.html?orderId=${item.Id}">${item.orderNumber}</a></th>
+      <th >${item.orderDate}</th>
+      <th >${item.orderIsSubscription}</th>
+      <th >${item.orderTotal}</th>
+      <th >${item.orderPayment}</th>
+      <th >${item.orderAmount}</th>
+      <th >${item.orderStatus}</th>
+      </tr>`;
+  });
 
-  str = `<tr class="text-center" >
-  <th ><a href="order.html/">${data.orderNumber}</a></th>
-  <th >${data.orderDate}</th>
-  <th >${data.orderIsSubscription}</th>
-  <th >${data.orderTotal}</th>
-  <th >${data.orderPayment}</th>
-  <th >${data.orderAmount}</th>
-  <th >${data.orderStatus}</th>
-  </tr>`;
-
-  // 在物件中取陣列裡的值
-  //   let array = orderList.forEach(function (item, index, array) {
-  //     console.log(item, index, array);
-  //   });
-  //   console.log(array);
-  //   console.log(orderList);
   ordered.innerHTML = str;
 });

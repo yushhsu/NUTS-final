@@ -1,11 +1,10 @@
-// const url = "https://tastynuts.rocket-coding.com/image";
 // 菜單頁--------------------------------------------------------------------------------------------菜單頁---
 const recipeItem = document.querySelector(".recipeItem");
 function combineRecipeItem(item) {
   return `
                 <div class="row my-md-5 center">
                     <div class="col-md-8 ">
-                        <img src="${imgUrl}/${item.subscriptionImgCover}" class="w-50 h-auto" alt="">
+                        <img src="${url}/${item.recipeCover}" class="w-50 h-auto" alt="">
                     </div>
                     <div class="col-md-4 ">
                         <dl class="row mb-0 border border-dark p-4 m-1"> 
@@ -47,12 +46,12 @@ function combineRecipeItem(item) {
 
 function getRecipeDetailData() {
   axios
-    .get("https://tastynuts.rocket-coding.com/api/recipes/1")
+    .get(`https://tastynuts.rocket-coding.com/api/recipes/${eachProductId}`)
     .then(function (res) {
       let data = [];
-      let str = "";
       data.push(res.data);
       // console.log(data);
+
       data.forEach(function (item) {
         recipeItem.innerHTML = combineRecipeItem(item);
       });

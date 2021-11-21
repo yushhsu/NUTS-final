@@ -38,6 +38,7 @@ axios
             </div>
         </div>
     </li>`;
+      console.log(item.Id);
     });
     // console.log(str);
     productList.innerHTML = str;

@@ -187,9 +187,9 @@ function countingProduct() {
 
       let shippingFee = 0;
       if (totalPrice > 2000) {
-        alert("特價");
+        return;
       } else {
-        shippingFee += 100;
+        shippingFee += 160;
       }
       console.log(shippingFee);
 

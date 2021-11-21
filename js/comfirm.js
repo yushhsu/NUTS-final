@@ -35,7 +35,7 @@ function getListItem(e) {
     // console.log(item.productName);
   });
   //   console.log(cartData);
-  //   console.log(str);
+  // console.log(str);
 
   //   console.log(shoppingCartList); //null
   shoppingCartList.innerHTML += str;
@@ -66,7 +66,7 @@ function countingProduct() {
 
     cartData.forEach(function (item) {
       //log 看是不是數字型別
-      //   console.log(typeof item.productQuantity);
+      console.log(item);
       //然後轉型
       let iproductQuantity = parseInt(item.productQuantity);
       let iproductSpePrice = parseInt(item.productSpePrice);
@@ -90,12 +90,12 @@ function countingProduct() {
             </div>
          <div class="row border-top pt-3 ">
              <p class="col-md-9 text-end">運費NT$</p>
-             <p class="col-md-2 text-center">100</p>
+             <p class="col-md-2 text-center">${item.orderShipping}</p>
              <p class="col-md-1 text-center">元</p>
          </div>
          <div class="row  pt-3 bg-warning">
              <p class="col-md-9 text-end">本訂單需付款金額NT$</p>
-             <p class="col-md-2 text-center">${totalPrice + 100}</p>
+             <p class="col-md-2 text-center">${totalPrice}+${item.orderShipping}</p>
              <p class="col-md-1 text-center">元</p>
          </div>
 
@@ -104,13 +104,13 @@ function countingProduct() {
   });
 }
 countingProduct();
-// console.log(countingPrice.innerHTML);
+console.log(countingPrice.innerHTML);
 
 //收件人資料
 function payAndShip() {
   // const shippingInfo = JSON.parse(localStorage.getItem("shippingInfo"));
   shippingData = shippingInfo;
-  console.log(shippingData);
+  // console.log(shippingData);
   const shippingToSomeone = document.querySelector(".shippingToSomeone");
 
   // shippingData.forEach(function(item){})
@@ -163,7 +163,9 @@ function payAndShip() {
   console.log(shippingToSomeone.innerHTML);
 }
 payAndShip();
+console.log(payAndShip);
 
+//付款金額送金流
 const payBtn = document.querySelector(".payBtn");
 let PostPayBillAPI =
   "https://tastynuts.rocket-coding.com/api/orderConfirmation";
@@ -173,41 +175,39 @@ let Newebpay = document.forms["Newebpay"];
 console.log(Newebpay);
 
 let MemberUserPayBtn = document.getElementById("MemberUserPayBtn");
-
 let PayBillData = "";
+let payBillData = {
+  order: {
+    orderPayment: "1",
+    orderStatus: "0",
+    orderShipping: "160",
+    orderRcName: "name01",
+    orderRcMPhone: "mphone01",
+    orderRcHPhone: "hphone01",
+    orderRcMail: "chywen18@gmail.com",
+    orderRcPostCode: "postcode01",
+    orderRcAddress: "address01",
+  },
+  order_info: [
+    {
+      productId: "1011",
+      productUnitPrice: "100",
+      productAmount: "2",
+    },
+  ],
+  order_subinfo: [
+    {
+      subscriptiontId: " 1",
+      subscriptioncCycle: " 雙週",
+      subscriptionPrice: " 1000",
+    },
+  ],
+};
+console.log(token);
+console.log(payBillData);
+let license = { headers: { Authorization: `Bearer ${token}` } };
 
 function PostToPayBill() {
-  let payBillData = {
-    order: {
-      orderPayment: "1",
-      orderStatus: "0",
-      orderShipping: "160",
-      orderRcName: "name01",
-      orderRcMPhone: "mphone01",
-      orderRcHPhone: "hphone01",
-      orderRcMail: "chywen18@gmail.com",
-      orderRcPostCode: "postcode01",
-      orderRcAddress: "address01",
-    },
-    order_info: [
-      {
-        productId: "1011",
-        productUnitPrice: "100",
-        productAmount: "2",
-      },
-    ],
-    order_subinfo: [
-      {
-        subscriptiontId: " 1",
-        subscriptioncCycle: " 雙週",
-        subscriptionPrice: " 1000",
-      },
-    ],
-  };
-  console.log(token);
-  console.log(payBillData);
-  let license = { headers: { Authorization: `Bearer ${token}` } };
-
   axios
     .post(PostPayBillAPI, payBillData, license)
     .then(function (response) {
@@ -237,9 +237,5 @@ function PostToPayBill() {
 
   // if(payBtn == )
 }
-
+console.log(PostToPayBill);
 MemberUserPayBtn.addEventListener("click", PostToPayBill);
-
-// payBtn.addEventListener("click", function (e) {
-
-// });

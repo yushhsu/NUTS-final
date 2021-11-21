@@ -9,32 +9,45 @@ axios({
     Authorization: `Bearer ${token}`,
   },
 }).then(function (res) {
-  console.log(res);
-  data = res.data.orderall[0];
-  console.log(data);
-  ordered.innerHTML = `<tr class="text-center" >
-  <th ><a href="order.html/">${data.orderNumber}</a></th>
-  <th >${data.orderDate}</th>
-  <th >${data.orderIsSubscription}</th>
-  <th >${data.orderTotal}</th>
-  <th >${data.orderPayment}</th>
-  <th >${data.orderAmount}</th>
-  <th >${data.orderStatus}</th>
-  </tr>`;
+  //   console.log(res);
+
+  data = res.data.orderall;
+  //   console.log(data);
+
+  data.forEach((item) => {
+    // console.log(item);
+    str += `<tr class="text-center orders" >
+      <th >${item.orderNumber}</a></th>
+      <th >${item.orderDate}</th>
+      <th >${item.orderIsSubscription}</th>
+      <th >${item.orderTotal}</th>
+      <th >${item.orderPayment}</th>
+      <th >${item.orderAmount}</th>
+      <th >${item.orderStatus}</th>
+      </tr>`;
+  });
 });
 
 axios({
   method: "get",
-  url: "https://tastynuts.rocket-coding.com/api/orderinfo/43",
+  url: `https://tastynuts.rocket-coding.com/api/orderinfo/${eachProductId}`,
   headers: {
     Authorization: `Bearer ${token}`,
   },
 }).then(function (res) {
   console.log(res);
+  console.log(res.data[0].order_info);
   console.log(res.data[0].order_info[0].productName[0]);
   let itemTop = res.data[0].order_info[0];
   console.log(res.data[0]);
   let itemLow = res.data[0];
+
+  let productStr = ` <tr>
+      <th >${itemTop.productName[0]}</th>
+      <th >${itemTop.orderSubtotal}</th>
+      <th >${itemTop.productAmount}</th>
+      <th >${itemTop.productUnitPrice}</th>
+  </tr>`;
 
   //第59行可以forEach
   orderCheck.innerHTML = `
