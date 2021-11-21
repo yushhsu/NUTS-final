@@ -24,7 +24,7 @@
             <div class=" col-md-2 my-3">
                 <!-- 顏色修改 -->
                 <div class="list-group text-center py-3 border mb-1 ">
-                    <a href="#" class=" active " aria-current="true">
+                    <a href="orderStatus.html" class=" active " aria-current="true">
                         訂單管理
                     </a>
                 </div>
@@ -39,8 +39,8 @@
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                             <div class="accordion-body">
                                 <div class="list-group list-group-flush ">
-                                    <a href="#" class="list-group-item list-group-item-action ">已發布</a>
-                                    <a href="#" class="list-group-item list-group-item-action ">草稿</a>
+                                    <a href="productlist.html" class="list-group-item list-group-item-action ">已發布</a>
+                                    <a href="addProduct.html" class="list-group-item list-group-item-action ">草稿</a>
                                     
                                     
                                 </div>
@@ -54,11 +54,11 @@
                                 商品菜單
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="list-group list-group-flush ">
-                                    <a href="#" class="list-group-item list-group-item-action ">已發布</a>
-                                    <a href="#" class="list-group-item list-group-item-action ">草稿</a>
+                                    <a href="blog.html" class="list-group-item list-group-item-action ">已發布</a>
+                                    <a href="addBlog.html" class="list-group-item list-group-item-action ">草稿</a>
                                     
                                     
                                 </div>
@@ -66,31 +66,13 @@
                         </div>
                     </div>
 
-
-                    
-                    <!-- <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        
-                    </button> -->
-                    <!-- <div class="accordion-item">
-                        <button class="accordion-button collapsed" type="button"  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            訂單管理
-                        </button>
-                        <h2 class="accordion-header" id="headingThree">
-                            
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>  
 
             <div class="col-md-10 my-3">
-                <div class="productListPosted card mb-2 " >
-                    <!-- <div class="row g-0 position-relative">
-                        <input class="form-check-input position-absolute top-50 start-0 translate-middle-y ms-3 fs-4 " type="checkbox" value="" aria-label="...">                        
+                <div class="card mb-2 " >
+                    <div class="row g-0 position-relative">
+                        <input class="form-check-input position-absolute top-50 start-0 translate-middle-y ms-3" type="checkbox" value="" aria-label="...">                        
                         <div class=" ">
                             <div class="card-body d-flex align-items-center">
                                 <img src="../image/origen-L-01.png" alt="..." class="w-25">
@@ -113,15 +95,110 @@
                                     <p class="card-text d-flex align-items-center mt-2"><small class="text-muted">商品資訊</small></p>
                                 </div>
                                 <div class="d-flex align-items-center">
-                                    <input type="button" class="edit btn btn-primary ms-1" value="編輯" onclick="location.href='editProductlist.html'">
+                                    <a href="#" class="btn btn-primary ms-1 ">編輯</a>
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
+                <div class="card mb-2 " >
+                    <div class="row g-0 position-relative">
+                        <input class="form-check-input position-absolute top-50 start-0 translate-middle-y ms-3" type="checkbox" value="" aria-label="...">                        
+                        <div class=" ">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="../image/origen-L-01.png" alt="..." class="w-25">
+                                <div class="col-sm-4">
+                                    <h5 class="card-title">商品名稱</h5>
+                                    <p class="card-text">商品編號：1234-ab</p>
+                                    <p class="card-text"><small class="text-muted">上架時間</small></p>
+                                </div>
+                                <div class="col-sm-4  ">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            商品分類
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">腰果系列</a></li>
+                                            <li><a class="dropdown-item" href="#">堅果系列</a></li>
+                                            <li><a class="dropdown-item" href="#">禮盒系列</a></li>
+                                        </ul>
+                                    </div>
+                                    <p class="card-text d-flex align-items-center mt-2"><small class="text-muted">商品資訊</small></p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-primary ms-1 ">編輯</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-2 " >
+                    <div class="row g-0 position-relative">
+                        <input class="form-check-input position-absolute top-50 start-0 translate-middle-y ms-3" type="checkbox" value="" aria-label="...">                        
+                        <div class=" ">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="../image/origen-L-01.png" alt="..." class="w-25">
+                                <div class="col-sm-4">
+                                    <h5 class="card-title">商品名稱</h5>
+                                    <p class="card-text">商品編號：1234-ab</p>
+                                    <p class="card-text"><small class="text-muted">上架時間</small></p>
+                                </div>
+                                <div class="col-sm-4  ">
+                                    <div class="dropdown">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            商品分類
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">腰果系列</a></li>
+                                            <li><a class="dropdown-item" href="#">堅果系列</a></li>
+                                            <li><a class="dropdown-item" href="#">禮盒系列</a></li>
+                                        </ul>
+                                    </div>
+                                    <p class="card-text d-flex align-items-center mt-2"><small class="text-muted">商品資訊</small></p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <a href="#" class="btn btn-primary ms-1 ">編輯</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-2 " >
+                        <div class="row g-0 position-relative">
+                            <input class="form-check-input position-absolute top-50 start-0 translate-middle-y ms-3" type="checkbox" value="" aria-label="...">                        
+                            <div class=" ">
+                                <div class="card-body d-flex align-items-center">
+                                    <img src="../image/origen-L-01.png" alt="..." class="w-25">
+                                    <div class="col-sm-4">
+                                        <h5 class="card-title">商品名稱</h5>
+                                        <p class="card-text">商品編號：1234-ab</p>
+                                        <p class="card-text"><small class="text-muted">上架時間</small></p>
+                                    </div>
+                                    <div class="col-sm-4  ">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                商品分類
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li><a class="dropdown-item" href="#">腰果系列</a></li>
+                                                <li><a class="dropdown-item" href="#">堅果系列</a></li>
+                                                <li><a class="dropdown-item" href="#">禮盒系列</a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="card-text d-flex align-items-center mt-2"><small class="text-muted">商品資訊</small></p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <a href="#" class="btn btn-primary ms-1 ">編輯</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            
 
                 <div class="d-flex justify-content-center">
-                    <a href="addProduct.html" class="btn"  role="button" data-bs-toggle="button"><span class="material-icons fs-1 primary">add_circle_outline</span></a>
+                    <a href="#" class="btn"  role="button" data-bs-toggle="button"><span class="material-icons fs-1 primary">add_circle_outline</span></a>
                 </div>
             </div>
             
